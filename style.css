@@ -89,7 +89,7 @@ footer {
     padding: 20px;
 }
 /* small screens? */
-@media (max-width: 1610px){
+@media (max-height: 1610px){
     .showcase::after {
         height: 50vh;
     }
