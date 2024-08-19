@@ -1,0 +1,121 @@
+body {
+    background-color: rgba(0,0,0,1); 
+    margin: 0;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.showcase::after {
+    content: '';
+    height: 100vh;
+    background-image: url("logo-2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+    filter: blur(10px);
+    --webkit-filter: blur(10px);
+    transition: all 1000ms;
+
+}
+.showcase:hover::after {
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+}
+
+.content {
+    position: absolute;
+    z-index: 1;
+    top: 10%;
+    left: 50%;
+    /* margin-top: 15vh; */
+    margin-top: 105px;
+    margin-left: -145px;
+    height: 350px;
+    text-align: center;
+    transition: all 1000ms;
+    width: 300px;
+    height: 350px;
+}
+.showcase:hover .content {
+    filter: blur(2px);
+    /* --webkit-filter: blur(1px); */
+}
+.content .logo {
+   width: 180px;
+   height: 180px;
+}
+.content .title {
+    margin-top: 10px;
+    font-size: 33px;
+    line-height: 1.2;
+}
+.content .text {
+    line-height: 1.7;
+    margin-top: 1rem;
+
+}
+.container {
+    max-width: 960px;
+    margin: auto; 
+    overflow: hidden;
+    padding: 4rem 1rem;
+} 
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    /* column-gap: 10px; */
+}
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.center {
+    text-align: center;
+    margin: auto;
+     
+} 
+.bg-light {
+    background: #f4f4f4;
+    color: #333;
+}
+.bg-dark {
+    background: #333;
+    color: #f4f4f4;
+}
+footer p {
+    margin: 0;
+}
+footer {
+    padding: 20px;
+}
+/* small screens? */
+@media (max-width: 560px){
+    .showcase::after {
+        height: 50vh;
+    }
+    .content {
+      top: 10%;
+      /* width: 100%; */
+      margin-top: 5px;
+    }
+    .content .logo {
+        width: 140px;
+        height: 140px;
+    }
+    .content .text {
+        display: none;
+    }
+    .grid-3,
+    .grid-2 {
+        grid-template-columns: 1fr;
+        /* row-gap: 10px; */
+    }
+    .services div {
+        border-bottom: #333 dashed 1px;
+        padding: 1.2rem;
+    }
+    }
+
+
+
+
